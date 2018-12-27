@@ -1,0 +1,138 @@
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+.header-frame {
+  padding: 0px 0 12px;
+  .container {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
+.mobile-logo {
+  display: none;
+  margin: 0 0 20px;
+  @include media("<desktop") {
+    display: block;
+    float: left;
+
+  }
+}
+.nav-opener {
+  display: none;
+  overflow: hidden;
+  margin-top: 30px;
+  text-indent: 101%;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  @include media("<desktop") {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transition: all .2s linear;
+    background: #555555;
+  }
+  &:before {
+    bottom: 23px;
+    box-shadow: 0 10px 0 #555555;
+  }
+  &:after {
+    bottom: 3px;
+  }
+}
+.nav-active {
+  .nav-opener {
+    &:before, &:after {
+      bottom: 50%;
+    }
+    &:before {
+      transform: translateY(50%) rotate(-45deg);
+      box-shadow: none;
+    }
+    &:after {
+      transform: translateY(50%) rotate(-135deg);
+    }
+  }
+  .nav-slide {
+    @include media("<desktop") {
+      transform: translateX(0);
+    }
+  }
+}
+
+.nav-slide {
+  text-align: center;
+  @include media("<desktop") {
+    z-index: 3;
+    position: fixed;
+    top: 108px;
+    right: 0;
+    width: 250px;
+    text-align: center;
+    background: #fff;
+    padding: 10px 0;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
+  @include media("<tablet") {
+    padding-top: 5px;
+    top: 70px;
+  }
+  #nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    @include media("<desktop") {
+      display: block;
+      min-width: 100%;
+    }
+    li {
+      padding: 0 15px;
+      @include media("<desktop") {
+        margin-bottom: 5px;
+        border-bottom: 1px solid $black;
+      }
+      @include media("<tablet") {
+        margin-bottom: 5px;
+        border-bottom: 1px solid $black;
+      }
+      a {
+        color: #555555;
+        @include media("<tablet") {
+          padding: 14px 17px;
+          color: #24282f;
+          display: block;
+        }
+      }
+    }
+    .logotype {
+      padding: 0 140px;
+      @include media("<desktop") {
+        display: none;
+      }
+    }
+  }
+}

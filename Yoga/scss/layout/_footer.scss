@@ -1,0 +1,135 @@
+#footer {
+  .footer-frame {
+    padding: 97px 0;
+    background: #5b6ceb;
+    color: #fff;
+    @include media("<tablet") {
+      padding: 36px 0;
+    }
+  }
+  address {
+    font-style: normal;
+    ul {
+      li {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 52px;
+    text-transform: uppercase;
+  }
+  .row {
+    flex-wrap: nowrap;
+    margin: 0;
+    @include media("<desktop") {
+      display: block;
+      text-align: center;
+    }
+  }
+  .footer-about {
+    width: 50%;
+    @include media("<desktop") {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    @include media("<tablet") {
+      display: block;
+      margin: 0 auto 40px;
+      width: 100%;
+    }
+    .text {
+      max-width: 470px;
+      line-height: 1.6;
+      margin-bottom: 69px;
+      @include media("<tablet") {
+        margin-bottom: 60px;
+        max-width: 100%;
+      }
+    }
+    .footer-social{
+      font-size: 0;
+      @include media("<tablet") {
+        width: 100%;
+        margin: 0 auto;
+      }
+      li {
+        display:inline-block;
+        vertical-align:top;
+        margin-right: 17px;
+      }
+    }
+  }
+  .footer-contact {
+    width: 25%;
+    @include media("<desktop") {
+      display: inline-block;
+    }
+    @include media("<tablet") {
+      display: block;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+    .icon-block, .address {
+      display:inline-block;
+      vertical-align:top;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px 0 0;
+      margin-right: 18px;
+    }
+    .phone {
+      margin-right: 12px;
+    }
+    .address {
+      padding-top: 3px;
+      span {
+        display: block;
+        margin-bottom: 6px;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+  .footer-info {
+    width: 22.5%;
+    @include media("<tablet") {
+      display: block;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+    h3 {
+      margin-bottom: 73px;
+    }
+    .icon-block, .address {
+      display:inline-block;
+      vertical-align:top;
+    }
+    .web {
+      li {
+        margin-bottom: 45px;
+        padding: 4px 5px 0;
+        a {
+          color: #fff;
+          display: block;
+        }
+      }
+      .icon-block {
+        margin-right: 8px;
+      }
+    }
+  }
+  .copy {
+    padding: 44px 0 20px;
+    background: #5363d8;
+    .copy-holder {
+      font-size: 16px;
+      color: #b0b9fa;
+      text-align: center;
+    }
+  }
+}
