@@ -675,8 +675,19 @@ a {
 	text-decoration: none;
 }
 
+#header {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
 .header-frame {
 	padding: 0 0 12px;
+	background: #fff;
+	z-index: 99;
 }
 
 .header-frame .container:after {
@@ -767,6 +778,10 @@ a {
 
 .nav-slide #nav .logotype {
 	padding: 0 140px;
+}
+
+#main {
+	padding-top: 85px;
 }
 
 .form-container {
@@ -973,7 +988,7 @@ a {
 	height: 57px;
 	position: absolute;
 	background: #fff;
-	z-index: 99;
+	z-index: 6;
 	border-radius: 50%;
 	display: none;
 	top: 41%;
@@ -1149,6 +1164,7 @@ a {
 	padding: 0 0 50px;
 	background: #fff;
 	border: 1px solid #d7d7d7;
+	margin-bottom: 109px;
 	border-radius: 10px;
 }
 
