@@ -1,0 +1,134 @@
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	background: #24282f;
+
+}
+.header-frame {
+	padding: 40px 0 38px;
+	@include media("<tablet") {
+		padding: 20px 0px;
+	}
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.logo {
+    margin-right: 30px;
+    padding: 0 10px;
+}
+.nav-opener {
+	display: none;
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  position: relative;
+	@include media("<desktop") {
+		display: inline-block;
+		vertical-align: top;
+	}
+  &:before, &:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 4px;
+		transition: all .2s linear;
+		background: #fff;
+  }
+  &:before {
+  	bottom: 23px;
+  	box-shadow: 0 10px 0 #fff;
+  }
+  &:after {
+  	bottom: 3px;
+  }
+}
+.nav-active {
+	.nav-opener {
+		&:before, &:after {
+			bottom: 50%;
+		}
+		&:before {
+			transform: translateY(50%) rotate(-45deg);
+    	box-shadow: none;
+		}
+		&:after {
+			transform: translateY(50%) rotate(-135deg);
+		}
+	}
+	.nav-slide {
+		@include media("<desktop") {
+			transform: translateX(0);
+		}
+	}
+}
+.nav-slide {
+	@include media("<desktop") {
+		z-index: 3;
+		position: fixed;
+		top: 108px;
+		right: 0;
+		width: 250px;
+		text-align: center;
+		background: #fff;
+		padding: 10px 0;
+		overflow-y: auto;
+		transform: translateX(100%);
+		transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+	}
+	@include media("<tablet") {
+		padding-top: 5px;
+		top: 70px;
+	}
+}
+
+#nav {
+	display: flex;
+	justify-content: space-between;
+  	max-width: 906px;
+	@include media("<desktop") {
+		display: block;
+		min-width: 100%;
+	}
+  li {
+    padding: 0 20px;
+	  @include media("<tablet") {
+		  margin-bottom: 5px;
+		  border-bottom: 1px solid $black;
+	  }
+  	a {
+  		padding: 0 16px 0 13px;
+  		text-transform: uppercase;
+  		color: #fff;
+  		position: relative;
+  		transition: all 0.3s;
+  		&:hover {
+  			&:before {
+  			content: '';
+  			position: absolute;
+  			width: 100%;
+  			bottom: -43px;
+  			left: 0;
+  			height: 2px;
+  			background: #b5a263;
+  			}
+  		}
+		@include media("<tablet") {
+			padding: 14px 17px;
+			color: #24282f;
+			display: block;
+		}
+		@include media("<tablet") {
+			padding: 10px 17px;
+		}
+  	}
+  }
+}

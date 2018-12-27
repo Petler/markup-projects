@@ -1,0 +1,282 @@
+#wrapper {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.header-container {
+	max-width: 1455px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.container {
+	max-width: 1158px;
+	padding: 0 15px;
+	margin: 0 auto;
+	@include media("<tablet") {
+		padding: 0 15px;
+	}
+}
+#main {
+	padding-top: 104px;
+	@include media("<tablet") {
+		padding-top: 70px;
+	}
+}
+.banner {
+	position: relative;
+	background: url(../images/banner.jpg) no-repeat 0 -104px;
+	padding: 139px 0;
+	@include media("<tablet") {
+		padding: 100px 0;
+	}
+	@include media("<600px") {
+		padding-bottom: 65px;
+	}
+	@include media("<415px") {
+		padding-bottom: 90px;
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #24282f;
+		opacity: .9;
+		padding: 81px 0;
+		@include media("<tablet") {
+			padding: 45px 0;
+		}
+		@include media("<600px") {
+			padding: 20px 0 0;
+		}
+	}
+	.text {
+		max-width: 795px;
+		color: #fff;
+		line-height: 1;
+		font-size: 13px;
+		h1 {
+			font-family: 'Raleway', sans-serif;
+			text-transform: uppercase;
+			color: #fff;
+			margin-bottom: 12px;
+			@include media("<tablet") {
+				font-size: 32px;
+			}
+		}
+		p {
+		line-height: 1.5;
+		}
+	}
+}
+.title {
+		text-transform: uppercase;
+		position: relative;
+		text-align: center;
+		font-family: 'Raleway';
+		color: #24282f;
+		padding-bottom: 26px;
+		margin-bottom: 33px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 78px;
+			height: 2px;
+			background: #b5a263;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+.management-section {
+	padding: 147px 0 28px;
+	@include media("<tablet") {
+		padding-top: 50px;
+	}
+	.info {
+		@include media("<tablet") {
+			text-align: center;
+		}
+		img {
+			display: inline-block;
+    		margin-bottom: 22px;
+		}
+	}
+	.info-holder {
+		padding: 0 9px;
+		display: flex;
+		align-items: flex-end;
+		@include media("<desktop") {
+			display: block;
+		}
+		h3 {
+			font-family: 'Raleway';
+			text-transform: uppercase;
+			margin-bottom: 2px;
+		}
+		span {
+			color: #b5a263;
+		}
+		.text-holder {
+			margin-right: 44px;
+			@include media("<desktop") {
+				margin: 0 0 10px ;
+			}
+		}
+		.social {
+			ul {
+				display: flex;
+				@include media("<desktop") {
+					display: inline-block;
+				}
+				li {
+					margin-right: 6px;
+					&:last-child {
+						margin-right: 0;
+					}
+					@include media("<desktop") {
+						display: inline-block;
+					}
+					a {
+						color: #fff;
+				    display: block;
+				    font-size: 16px;
+				    padding: 8px 0 0 0;
+				    border: 1px solid #d1d5d8;
+				    border-radius: 50%;
+				    width: 35px;
+				    height: 35px;
+				    text-align: center;
+				    background: #dedede;
+						transition: all 0.3s;
+						&:hover {
+							background: #b5a263;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+.row-holder {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	margin: 0 -27px 40px;
+	@include media("<desktop") {
+		margin: 0 -15px 40px;
+	}
+}
+.col-4 {
+	width: 33.333%;
+	padding: 0 27px;
+	@include media("<desktop") {
+		padding: 0 15px;
+	}
+	@include media("<tablet") {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	@include media("<415px") {
+		width: 100%;
+	}
+}
+.button {
+	display: block;
+	width: 164px;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 16px;
+	color: #24282f;
+	text-transform: uppercase;
+	border: 1px solid #24282f;
+	border-radius: 35px;
+  padding: 14px 20px;
+	transition: all 0.3s;
+	&:hover {
+		border: 1px solid #b5a263;
+		background: #b5a263;
+		color: #ffffff;
+	}
+}
+.bx-pager {
+	display: none;
+}
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto;
+}
+.prev {
+		display: block;
+		float: none;
+		position: absolute !important;
+		content: "\e901";
+		font-family: 'icomoon';
+		position: absolute;
+		left: 0;
+		top: 52px;
+		font-size: 26px;
+		color: #24282f;
+	}
+	.next {
+		display: block;
+		float: none;
+		position: absolute !important;
+		content: "\e900";
+		font-family: 'icomoon';
+		position: absolute;
+		right: 0;
+		top: 52px;
+		font-size: 26px;
+		color: #24282f;
+	}
+.testimonials-slider {
+	position: relative;
+}
+.testimonials-section {
+	text-align: center;
+	padding: 120px 0 116px;
+	background: #f7f7f7;
+	.title {
+		margin-bottom: 64px;
+		font-family: 'Open Sans';
+		font-weight: 500;
+		&:after {
+			background: #24282f;
+		}
+	}
+	.slide {
+		padding: 0 110px;
+		@include media("<tablet") {
+			padding: 0 60px;
+		}
+		.testimonials-block {
+			color: #212121;
+			p {
+				margin-bottom: 36px;
+				line-height: 1.8;
+			}
+			span {
+				display: block;
+			}
+			.img-block {
+				width: 90px;
+				border-radius: 50%;
+				margin: 0 auto 26px;
+				img {
+				display:inline-block;
+				border-radius: 50%;
+				}
+			}
+			.author {
+				font-size: 16px;
+				text-transform: uppercase;
+				color: #b5a263;
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
